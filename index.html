@@ -1,0 +1,160 @@
+
+//Abra o VS Code.
+//Entre na aba de extensões.
+//Pesquise Live Server.
+//Instale a extensão.
+//Abra o arquivo index.html.
+//Clique com o botão direito.
+//Selecione Open with Live Server.
+//Aperte F12 para testar versão mobile
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyFlow - Organizador de Estudos</title>
+
+    <meta name="description" content="Organize suas tarefas escolares com o StudyFlow.">
+
+    <meta name="theme-color" content="#7656d6">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="icon" href="icons/icon-192.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">📚</span>
+                <div>
+                    <h1>StudyFlow</h1>
+                    <p>Seu espaço de organização</p>
+                </div>
+            </div>
+
+            <span class="header-label">ORGANIZE SEUS ESTUDOS</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <p class="welcome-small">BEM-VINDA(O) AO STUDYFLOW</p>
+                <h2>Organize seus estudos!</h2>
+                <p>Planeje suas atividades e acompanhe seu progresso.</p>
+            </div>
+
+            <div class="welcome-icon">✏️</div>
+        </section>
+
+        <section class="statistics">
+
+            <div class="stat-card">
+                <span class="stat-icon">📋</span>
+                <p>Total de tarefas</p>
+                <strong id="total-tarefas">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">⏳</span>
+                <p>Pendentes</p>
+                <strong id="total-pendentes">0</strong>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-icon">✅</span>
+                <p>Concluídas</p>
+                <strong id="total-concluidas">0</strong>
+            </div>
+
+        </section>
+
+        <section class="form-section">
+
+            <div class="section-title">
+                <h2>Adicionar tarefa</h2>
+                <p>Cadastre uma nova atividade escolar.</p>
+            </div>
+
+            <form id="form-tarefa">
+
+                <div class="form-group">
+                    <label for="nome">Nome da tarefa</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        placeholder="Ex: Trabalho de matemática"
+                        required
+                        maxlength="80"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="materia">Matéria</label>
+                    <input
+                        type="text"
+                        id="materia"
+                        placeholder="Ex: Matemática"
+                        required
+                        maxlength="40"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data de entrega</label>
+                    <input type="date" id="data" required>
+                </div>
+
+                <button type="submit" class="add-button">
+                    + Adicionar tarefa
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="tasks-section">
+
+            <div class="section-title">
+                <h2>Minhas tarefas</h2>
+                <p>Acompanhe todas as suas atividades.</p>
+            </div>
+
+            <div class="filters">
+                <button class="filter-button active" data-filter="todas">
+                    Todas
+                </button>
+
+                <button class="filter-button" data-filter="pendentes">
+                    Pendentes
+                </button>
+
+                <button class="filter-button" data-filter="concluidas">
+                    Concluídas
+                </button>
+            </div>
+
+            <div id="lista-tarefas" class="task-list">
+                <!-- As tarefas serão adicionadas pelo JavaScript -->
+            </div>
+
+        </section>
+
+        <footer>
+            <p>StudyFlow © 2026 - Organize seus estudos com facilidade.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
