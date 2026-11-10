@@ -1,8 +1,6 @@
-
 const CACHE_NAME = "studyflow-v1";
 
 const ARQUIVOS = [
-    "./",
     "./index.html",
     "./style.css",
     "./script.js",
