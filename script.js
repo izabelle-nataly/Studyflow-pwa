@@ -1,4 +1,3 @@
-
 const form = document.getElementById("form-tarefa");
 
 const nome = document.getElementById("nome");
